@@ -1,0 +1,20 @@
+{
+    "UserAndRoles": true,
+    "Auth": true,
+    "Dashboard": true,
+    "BillingAddress": true,
+    "Quote": true,
+    "Miscellaneous": true,
+    "DynamicPages": true,
+    "InventoryManagement": true,
+    "HomeAndShop": true,
+    "CartManagement": true,
+    "Controller": true,
+    "CareerManagement": true,
+    "Setting": true,
+    "Aboutus": true,
+    "CourseManagement": true,
+    "Infographic": true,
+    "AboutUs": true,
+    "Enquiry": true
+}

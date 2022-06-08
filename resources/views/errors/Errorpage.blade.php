@@ -1,0 +1,1 @@
+<h2>This is the custom 500! Error Page</h2>

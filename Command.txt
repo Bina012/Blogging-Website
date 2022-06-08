@@ -1,0 +1,2 @@
+php artisan module:make-controller Api/ProductsController blog
+php artisan make:controller Api/ApiBaseController
