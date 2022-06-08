@@ -4,7 +4,7 @@ use Modules\Miscellaneous\Http\Controllers\Backend\Blog\BlogController;
 use Modules\Miscellaneous\Http\Controllers\Backend\Banner\BannerController;
 use Modules\Miscellaneous\Http\Controllers\Backend\Services\ServicesController;
 use Modules\Miscellaneous\Http\Controllers\Backend\Partner\PartnerController;
-use Modules\Miscellaneous\Http\Controllers\Backend\blog\BlogCategoryController;
+use Modules\Miscellaneous\Http\Controllers\Backend\Blog\BlogCategoryController;
 use Modules\Miscellaneous\Http\Controllers\Backend\Tag\TagController;
 
 /*
@@ -31,15 +31,7 @@ Route::prefix('cd-admin')->name('blog.')->middleware(['auth', 'can:see_dashboard
     route::get('/view-single-blog/{id}', [BlogController::class, 'view'])->name('view');
 });
 
-// Route::prefix('cd-admin')->name('blogcategory.')->middleware(['auth', 'can:see_dashboard'])->group(function () {
-//     /**
-//      * Blog Category route
-//      */
-//     route::get('/view-blogCategory', [BlogCategoryController::class, 'index'])->name('view');
-//     route::post('/add-blogCategory', [BlogCategoryController::class, 'add'])->name('add');
-//     route::post('/update-blogCategory', [BlogCategoryController::class, 'update'])->name('update');
-//     route::post('/delete-blogCategory', [BlogCategoryController::class, 'delete'])->name('delete');
-// });
+
 Route::prefix('cd-admin')->name('blogcategory.')->middleware(['auth', 'can:see_dashboard'])->group(function () {
     Route::get('/view-blogcategory',[BlogCategoryController::class,'index'])->name('index');
     Route::get('/add-blogcategory',[BlogCategoryController::class,'add'])->name('add');

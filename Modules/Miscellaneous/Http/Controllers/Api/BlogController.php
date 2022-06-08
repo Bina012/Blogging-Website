@@ -104,13 +104,13 @@ class BlogController extends ApiBaseController
     public function getBlogByTag($id)
     {
         try{
-            $blogs = $this->blogRepository->BlogByTag($id);
-            foreach($blogs->blogtags as $blog)
+            $tags = $this->blogRepository->BlogByTag($id);
+            foreach($tags->blogtags as $tag)
             {
                 //here second blog is name of the relation
-                $blog->blog->image=url('uploads/images/blog/'.$blog->blog->image);
+                $tag->blog->image=url('uploads/images/blog/'.$tag->blog->image);
             }
-            $data=['blogs'=>$blogs];
+            $data=['tags'=>$tags];
             return $this->successData('Successfully Fetched',$data,200);
         }catch(\Exception $e){
             return $this->errordata('Unable to fetch blog due to some server error!',$e->getMessage(),500);
